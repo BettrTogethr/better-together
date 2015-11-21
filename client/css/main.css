@@ -16,3 +16,7 @@
 .yield {
   margin-top: 20px;
 }
+
+img {
+  float: left;
+}
