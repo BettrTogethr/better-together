@@ -23,7 +23,7 @@ Creates a basic flow route, a common pattern.
 
     createFlowRoute 'home', path: '/'
     createFlowRoute 'about'
-    createFlowRoute 'assessment'
+    createFlowRoute 'assessment', path: '/assessment'
     createFlowRoute 'profile'
     createFlowRoute 'tinder'
 
