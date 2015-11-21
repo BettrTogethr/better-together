@@ -23,6 +23,7 @@ Creates a basic flow route, a common pattern.
 
     createFlowRoute 'home', path: '/'
     createFlowRoute 'about'
+    createFlowRoute 'feeling'
 
 ## Triggers
 
