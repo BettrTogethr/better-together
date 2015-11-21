@@ -24,8 +24,8 @@ Creates a basic flow route, a common pattern.
     createFlowRoute 'home', path: '/'
     createFlowRoute 'about'
     createFlowRoute 'assessment', path: '/assessment'
-    createFlowRoute 'profile'
-    createFlowRoute 'tinder'
+    createFlowRoute 'profile', path: '/profile'
+    createFlowRoute 'tinder', path: '/tinder'
 
 ## Triggers
 

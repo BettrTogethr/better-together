@@ -1,4 +1,13 @@
 <template name="tinder">
   <p>Find someone to talk to:</p>
-  <p>INSERT TINDER TEMPLATE HERE</p>
+  {{>tinderCard}}
+</template>
+
+<template name="tinderCard">
+<a class="glyphicon glyphicon-arrow-left">swipe left</a>
+<div class="center">
+  <img src="http://lorempixel.com/400/200/people" text="image of person">
+  <p class="description">"I'm feeling a little better."</p>
+</div>
+<a class="glyphicon glyphicon-arrow-right">swipe right</a>
 </template>
