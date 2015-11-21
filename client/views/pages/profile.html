@@ -1,11 +1,10 @@
 <template name="profile">
   <p>Tell us your story.</p>
-  <p>your name: __________</p>
-  <p>your story: __________</p>
-  <p>            __________</p>
-  <p>            __________</p>
-  <p>            __________</p>
+  <form class="profile-form">
+    <input type="text" name="name" placeholder="Your name"/>
+    <input type="text" name="story" placeholder="Your story"/>
+    <input type="submit" href="/tinder" class="btn-large" value="Find someone to talk to"/>
+  </form>
 
-  <a href="/tinder" class="btn-large">Find someone to talk to</a>
 </template>
 

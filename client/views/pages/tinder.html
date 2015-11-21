@@ -4,10 +4,15 @@
 </template>
 
 <template name="tinderCard">
-<a class="glyphicon glyphicon-arrow-left">swipe left</a>
-<div class="center">
-  <img src="http://lorempixel.com/400/200/people" text="image of person">
-  <p class="description">"I'm feeling a little better."</p>
-</div>
-<a class="glyphicon glyphicon-arrow-right">swipe right</a>
+  <div class="row center">
+    <div class="row center">
+      <p class="description">"I'm feeling a little better."</p>
+    </div>
+    <img src="http://lorempixel.com/400/200/people" text="image of person">
+  </div>
+  <div class="row">
+    <a class="col-md-4 fa fa-arrow-left"></a>
+    <p class="col-md-4">swipe left or right</p>
+    <a class="col-md-4 fa fa-arrow-right"></a>
+  </div>
 </template>

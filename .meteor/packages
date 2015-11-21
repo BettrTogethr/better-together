@@ -17,3 +17,5 @@ modweb:materialize-connection-status
 useraccounts:materialize
 useraccounts:flow-routing
 standard-minifiers
+
+fortawesome:fontawesome
