@@ -11,7 +11,16 @@ nav {
 }
 
 header {
-  ffont-size: 70pt;
+  font-size: 70pt;
+}
+
+.center {
+  text-align: center;
+
+}
+
+h2, h3 {
+  color: white;
 }
 
 .ultralight {
