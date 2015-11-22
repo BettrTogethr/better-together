@@ -1,39 +1,15 @@
 <template name="chat_selection">
-<<<<<<< HEAD
-  <p>Find someone to talk to:</p>
+  <h2 class="center">People Like You</h2>
   {{>userCard randomUser}}
-  <div class="row center">
-    <a href="/chat" id="download-button" class="btn-large waves-effect waves-light orange">Chat with me!</a>
-=======
-  <h2 class="center ultralight">People like you.</h2>
-  {{>tinderCard randomUser}}
-  <div class="row">
-    <a href="/chat" id="download-button" class="right btn-large waves-effect waves-light orange">Chat with me!</a>
->>>>>>> 1a9a5fd72d5f131a72059157cc21abc76fa2ed43
-  </div>
 </template>
 
 <template name="userCard">
   <div class="row center">
-<<<<<<< HEAD
-    <p class="description">My name is {{username}}</p>
-    <p class="description">"I'm feeling a little better."</p>
-    <img src="http://thecatapi.com/api/images/get?format=src&type=gif" text="image of person">
-  </div>
-  <div class="row center">
-=======
-    <div class="row center">
-      <h4 class="center ultralight">This is {{username}}.</h4>
-    </div>
+    <h4 class="center ultralight">This is {{username}}</h4>
     <img src="http://thecatapi.com/api/images/get?format=src&type=gif" text="image of person">
   </div>
   <div class="center row">
->>>>>>> 1a9a5fd72d5f131a72059157cc21abc76fa2ed43
-    <div class="col s2">
-      <button class="swipe fa fa-check-circle"></button>
-    </div>
-    <div clas="col s2">
-      <button class="swipe fa fa-arrow-circle-right"></button>
-    </div>
+      <a href="#" class="swipe fa fa-check-circle fa-5x"></a>
+      <a href="#" class="swipe fa fa-arrow-circle-right fa-5x"></a>
   </div>
 </template>

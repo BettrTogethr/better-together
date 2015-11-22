@@ -58,3 +58,11 @@ body {
 .yield {
   margin-top: 20px;
 }
+
+.swipe {
+  color: #78C09C;
+}
+
+.fa-check-circle {
+  padding-right: 25px;
+}
