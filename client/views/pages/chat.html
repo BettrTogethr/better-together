@@ -1,7 +1,11 @@
 <template name='chat'>
   <div class='row'>
-    <img src="/photo_profile.png">
-    <img src="/photo_profile.png">
+    <div class="col s2">
+      {{>profile_pic currentUser}}
+    </div>
+    <div class="col s2 offset-s8">
+      {{>profile_pic chatting_with}}
+    </div>
   </div>
   <div class='row'>
     <div class='col s12'>
@@ -14,5 +18,13 @@
     <div class='col s12'>
       {{> quickForm id='createMessage' type='method' meteormethod='createMessage' schema='MessageSchema' fields='message' buttonContent='Send' }}
     </div>
+  </div>
+</template>
+
+<template name="profile_pic">
+  <div class="center">
+    <img src="/photo_profile.png">
+    <br />
+    <h5 class="ultralight">{{username}}</h5>
   </div>
 </template>
