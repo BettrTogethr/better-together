@@ -1,5 +1,11 @@
 <template name='message'>
-  <div class="c-chat-window__message c-chat-window__message--person-1">
-    <p><b>{{username}} ({{prettyTime}}):</b> {{message}}</p>
-  </div>
+  {{#if $eq username currentUser.username}}
+    <div class="c-chat-window__message c-chat-window__message--person-1">
+      <p><b>{{username}} ({{prettyTime}}):</b> {{message}}</p>
+    </div>
+  {{else}}
+    <div class="c-chat-window__message c-chat-window__message--person-2">
+      <p><b>{{username}} ({{prettyTime}}):</b> {{message}}</p>
+    </div>
+  {{/if}}
 </template>
