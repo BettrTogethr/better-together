@@ -233,3 +233,16 @@ $spacing-unit: 1.250em; // 20px
 .collection{
   border: none;
 }
+
+
+
+@media screen and (max-width: 1000px) and (min-width: 568.96552px) {
+  .header {
+    font-size: 5.8vw;
+  }
+}
+@media screen and (max-width: 1000px) and (max-width: 568.96552px) {
+  .header {
+    font-size: 33px;
+  }
+}
