@@ -16,7 +16,7 @@
         <li class='{{isActiveRoute "home"}} nav-mobile-link'><a href='{{pathFor "home"}}'>Home</a></li>
         {{#if currentUser}}
           <li class='{{isActiveRoute "about"}} nav-mobile-link'><a href='{{pathFor "about"}}'>About</a></li>
-          <li class='logout'><a href='{{pathFor "signIn"}} nav-mobile-link'>Logout</a></li>
+          <li class='logout'><a href='{{pathFor "signIn"}}'>Logout</a></li>
         {{else}}
           <li class='{{isActiveRoute "signIn"}} nav-mobile-link'><a href='{{pathFor "signIn"}}'>Sign In</a></li>
         {{/if}}
