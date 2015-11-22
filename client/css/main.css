@@ -66,3 +66,12 @@ body {
 .fa-check-circle {
   padding-right: 25px;
 }
+
+.collection .collection-item{
+  background-color: #156e8b;
+  border: none;
+}
+
+.collection{
+  border: none;
+}

@@ -30,4 +30,5 @@
     Meteor.methods
       createMessage: (doc) ->
         doc.username = Meteor.user().username
+        console.log doc
         Chats.insert doc

@@ -9,11 +9,11 @@
 
       Chats.find criteria, options
 
-      Meteor.publish 'chatrooms', ->
-        criteria = {}
-        options =
-          limit: 10
-          sort:
-            timeCreated: -1
+    Meteor.publish 'chatrooms', ->
+      criteria = {}
+      options =
+        limit: 10
+        sort:
+          timeCreated: -1
 
-        Chatrooms.find criteria, options
+      Chatrooms.find criteria, options

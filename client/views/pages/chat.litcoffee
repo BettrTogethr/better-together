@@ -1,5 +1,8 @@
     Template.chat.helpers
-      messages: -> Chats.find().fetch()
+      messages: ->
+        messages = Chats.find().fetch()
+        console.log messages[0]
+        return messages
 
     Template.chat.onCreated ->
       self = this

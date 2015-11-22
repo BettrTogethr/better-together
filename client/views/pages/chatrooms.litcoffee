@@ -1,7 +1,10 @@
     Template.chatrooms.helpers
-      chatrooms: -> Chatrooms.find({owner: Meteor.user().username}).fetch()
+      chatrooms: ->
+        chatrooms = Chatrooms.find().fetch()
+        console.log chatrooms[0]
+        return chatrooms
 
-    Template.chat.onCreated ->
+    Template.chatrooms.onCreated ->
       self = this
       self.autorun ->
         self.subscribe 'chatrooms'

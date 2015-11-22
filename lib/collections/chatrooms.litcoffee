@@ -1,8 +1,10 @@
 # Chat Collection
 
-    @chatroomSchema = new SimpleSchema
-      chatroom:
+    @ChatroomSchema = new SimpleSchema
+      chatName:
         type: String
+      members:
+        type: [String]
 
     @ChatroomsSchema = new SimpleSchema
       chatName:
@@ -22,6 +24,7 @@
       remove: (userId, doc) -> userId?
 
     Meteor.methods
-      createchatroom: (doc) ->
+      createChatroom: (doc) ->
+        console.log doc
         doc.owner = Meteor.user().username
         Chatrooms.insert doc
