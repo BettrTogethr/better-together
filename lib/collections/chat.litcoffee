@@ -30,6 +30,7 @@
     Meteor.methods
       createMessage: (doc) ->
         doc.username = Meteor.user().username
+        console.log doc
         Chats.insert doc
       removeAllChats: () ->
         return if not Meteor.user()?
