@@ -27,6 +27,7 @@ Creates a basic flow route, a common pattern.
     createFlowRoute 'profile', path: '/profile'
     createFlowRoute 'chat_selection', path: '/chat_selection'
     createFlowRoute 'chat'
+    createFlowRoute 'desktopChatHolder'
 
 ## Triggers
 
