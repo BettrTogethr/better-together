@@ -5,6 +5,11 @@
     <input type="text" name="story" placeholder="Your story"/>
     <input type="submit" href="/tinder" class="btn-large" value="Find someone to talk to"/>
   </form>
-
+  {{>you}}
 </template>
 
+<template name="you">
+  <p>Your information:</p>
+  <p>You: {{currentUser.profile.name}}</p>
+  <p>Your story: {{currentUser.profile.story}}</p>
+</template>

@@ -7,7 +7,21 @@ Template.profile.events({
     console.log(name);
     console.log(story);
 
-    return false;
-    
+    console.log(Meteor.user());
+
+    Meteor.users.update(
+      { _id: Meteor.userId() },
+      {
+        $set: {
+          'profile.name': name,
+          'profile.story': story
+        }
+      }
+    );
+
+    event.target.name.value = "Your story";
+    event.target.story.value = "Your name";
+
+    FlowRouter.go('tinder');
   }
 });
