@@ -46,6 +46,7 @@ Template.userCard.helpers({
 
 Template.chat_selection.rendered = function(){
   var gifUrl = '/boy_avatar.png';
+  Session.set('gifUrl', gifUrl);
   Session.set('userIndex', 0);
   $('.fa-arrow-circle-right').click(function(){
     console.log("clicked swipe link");
