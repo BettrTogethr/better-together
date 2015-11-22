@@ -1,20 +1,18 @@
 <template name="chat_selection">
   <p>Find someone to talk to:</p>
-  {{>tinderCard randomUser}}
-  <div class="row">
-    <a href="/chat" id="download-button" class="right btn-large waves-effect waves-light orange">Chat with me!</a>
+  {{>userCard randomUser}}
+  <div class="row center">
+    <a href="/chat" id="download-button" class="btn-large waves-effect waves-light orange">Chat with me!</a>
   </div>
 </template>
 
-<template name="tinderCard">
+<template name="userCard">
   <div class="row center">
-    <div class="row center">
-      <p class="description">My name is {{username}}</p>
-      <p class="description">"I'm feeling a little better."</p>
-    </div>
+    <p class="description">My name is {{username}}</p>
+    <p class="description">"I'm feeling a little better."</p>
     <img src="http://thecatapi.com/api/images/get?format=src&type=gif" text="image of person">
   </div>
-  <div class="row">
+  <div class="row center">
     <div class="col s2">
       <button class="swipe fa fa-arrow-left"></button>
     </div>
