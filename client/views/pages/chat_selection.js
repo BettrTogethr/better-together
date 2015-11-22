@@ -19,8 +19,12 @@ var updateUser = function(context, delta){
   if (index < 0) {
     index = users.length - 1;
   }
-  var gifUrl = 'http://thecatapi.com/api/images/get?format=src&type=gif&size=med&time='+(new Date().getTime()).toString();
-  Session.set('gifUrl',gifUrl);
+  if (index % 2 == 0) {
+    Session.set('gifUrl', '/boy_avatar.png');
+  }
+  else {
+    Session.set('gifUrl', 'girl_avatar.png');
+  }
   Session.set('userIndex', index);
 };
 
@@ -41,8 +45,7 @@ Template.userCard.helpers({
 });
 
 Template.chat_selection.rendered = function(){
-  var gifUrl = 'http://thecatapi.com/api/images/get?format=src&type=gif&size=med&time='+(new Date().getTime()).toString();
-  Session.set('gifUrl',gifUrl);
+  var gifUrl = '/boy_avatar.png';
   Session.set('userIndex', 0);
   $('.fa-arrow-circle-right').click(function(){
     console.log("clicked swipe link");
