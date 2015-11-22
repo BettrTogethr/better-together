@@ -1,30 +1,39 @@
 <template name='chat'>
-  <div class='row'>
-    <div class="col s2">
+
+  <div class="c-chat-window">
+
+    <div class="c-users c-chat-window__user-images">
       {{>profile_pic currentUser}}
-    </div>
-    <div class="col s2 offset-s8">
       {{>profile_pic chatting_with}}
     </div>
-  </div>
-  <div class='row'>
-    <div class='col s12'>
-      {{#each messages}}
-        {{> message}}
-      {{/each}}
+
+    <div class="c-chat-window__scroll">
+      <div class='row'>
+        <div class='col s12'>
+          {{#each messages}}
+            {{> message}}
+          {{/each}}
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col s12'>
+          {{> quickForm id='createMessage' type='method' meteormethod='createMessage' schema='MessageSchema' fields='message' buttonContent='Send' }}
+        </div>
+      </div>
     </div>
+
   </div>
-  <div class='row'>
-    <div class='col s12'>
-      {{> quickForm id='createMessage' type='method' meteormethod='createMessage' schema='MessageSchema' fields='message' buttonContent='Send' }}
-    </div>
-  </div>
+
 </template>
 
 <template name="profile_pic">
-  <div class="center">
-    <img src="/photo_profile.png">
-    <br />
-    <h5 class="ultralight">{{username}}</h5>
-  </div>
+    <div class="c-user c-users__user">
+      <span class="c-avatar c-user__title">
+      <img class="c-avatar__asset" src="/photo_profile.png">
+      </span>
+      <div class="c-user__title">
+        <h5 class="ultralight">{{username}}</h5>
+      </div>
+    </div>
 </template>
