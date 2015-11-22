@@ -8,7 +8,6 @@ Template.chat_selection.helpers({
 Template.chat_selection.rendered = function(){
   $('.fa-arrow-circle-right').click(function(){
     console.log("clicked swipe link");
-    //FlowRouter.go('chat_selection')
     location.reload();
   });
 
