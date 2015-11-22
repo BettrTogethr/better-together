@@ -78,3 +78,12 @@ Template.userCard.onCreated(function(){
   console.log('session set');
 });
 
+Template.userCard.events({
+  'click .leftswipebutton': function(){
+    updateUser(this, -1);
+  },
+  'click .rightswipebutton': function(){
+    updateUser(this, 1);
+  }
+});
+
