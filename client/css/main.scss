@@ -77,6 +77,15 @@ a img {
   padding: 0px 20px 50px 20px;
 }
 
+.chat-fade-top {
+  background: url('/fade-chat.png') top left repeat-x;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 236px;
+}
+
 $browser-context: 16;
 
 @function rem($pixels, $context: $browser-context, $em: false) {
@@ -117,6 +126,11 @@ $spacing-unit: 1.250em; // 20px
 .c-users {
   position: relative;
   overflow: hidden;
+
+  h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
   &__user {
     &:nth-child(odd) {
@@ -194,6 +208,8 @@ $spacing-unit: 1.250em; // 20px
     left: 0;
     width: 100%;
     z-index: 1;
+
+    background: linear-gradient(to bottom, rgba(21,110,139,1) 0%,rgba(21,110,139,1) 31%,rgba(21,110,139,0) 100%)
   }
 
   &__scroll {
