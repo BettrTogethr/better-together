@@ -46,7 +46,8 @@ Template.chat_selection.rendered = function(){
     location.reload();
   });
 
-  $('.chat').click(function(){
+  $('.chat').click(function(e){
+    e.preventDefault();
     console.log("clicked check link");
     console.log(Session.get('chatting_with'));
     FlowRouter.go('chat')
