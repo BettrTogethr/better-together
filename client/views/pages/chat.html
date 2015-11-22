@@ -3,8 +3,8 @@
 
 
     <div class="c-users c-chat-window__user-images">
-      {{>profile_pic currentUser}}
-      {{>profile_pic chatting_with}}
+      {{>profile_pic_girl currentUser}}
+      {{>profile_pic_boy chatting_with}}
     </div>
 
 
@@ -28,10 +28,21 @@
 
 </template>
 
-<template name="profile_pic">
+<template name="profile_pic_girl">
     <div class="c-user c-users__user">
       <span class="c-avatar c-user__title">
-      <img class="c-avatar__asset" src="/photo_profile.png">
+      <img class="c-avatar__asset" src="/profile-girl.png">
+      </span>
+      <div class="c-user__title">
+        <h5 class="ultralight">{{username}}</h5>
+      </div>
+    </div>
+</template>
+
+<template name="profile_pic_boy">
+    <div class="c-user c-users__user">
+      <span class="c-avatar c-user__title">
+      <img class="c-avatar__asset" src="/profile-boy.png">
       </span>
       <div class="c-user__title">
         <h5 class="ultralight">{{username}}</h5>
