@@ -14,13 +14,12 @@ header {
   font-size: 70pt;
 }
 
-.center {
-  text-align: center;
-
+.fa {
+  color: black;
 }
 
-h2, h3, h4, h5 {
-  color: white;
+.center {
+  text-align: center;
 }
 
 .ultralight {
@@ -45,11 +44,7 @@ footer {
 
 body {
   background-color: #156e8b;
-  font-family: "Avenir Next"
-  color: white;
-}
-
-p {
+  font-family: "Avenir Next";
   color: white;
 }
 
@@ -62,4 +57,12 @@ p {
 
 .yield {
   margin-top: 20px;
+}
+
+.swipe {
+  color: #78C09C;
+}
+
+.fa-check-circle {
+  padding-right: 25px;
 }
