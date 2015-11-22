@@ -17,5 +17,7 @@ modweb:materialize-connection-status
 useraccounts:materialize
 useraccounts:flow-routing
 standard-minifiers
-
 fortawesome:fontawesome
+aldeed:autoform
+aldeed:collection2
+momentjs:moment
