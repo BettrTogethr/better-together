@@ -1,13 +1,17 @@
 <template name="chat_selection">
   <h2 class="center">People Like You</h2>
-  {{>userCard randomUser}}
+  {{#with user}}
+    {{> userCard}}
+  {{/with}}
 </template>
 
 <template name="userCard">
-  <div class="row center">
-    <h4 class="center ultralight">This is {{username}}</h4>
-    <img src="http://thecatapi.com/api/images/get?format=src&type=gif" text="image of person">
-  </div>
+  {{#HammerTouchArea gestureMap=templateGestures}}
+    <div class="row center">
+      <h4 class="center ultralight">This is {{username}}</h4>
+      <img style='swipable' src="{{gifUrl}}" text="image of person">
+    </div>
+  {{/HammerTouchArea}}
   <div class="center row">
     <a href="#" class="chat swipe">
       <img src="/chat_button.png" text="chat">
