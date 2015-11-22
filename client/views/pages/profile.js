@@ -22,6 +22,6 @@ Template.profile.events({
     event.target.name.value = "Your story";
     event.target.story.value = "Your name";
 
-    FlowRouter.go('tinder');
+    FlowRouter.go('chat_selection');
   }
 });
