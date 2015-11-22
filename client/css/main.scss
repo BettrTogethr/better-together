@@ -67,6 +67,15 @@ body {
   padding-right: 25px;
 }
 
+.profile-form {
+  input {
+    color: #fff;
+  }
+  label {
+    color: #fff;
+  }
+}
+
 
 
 $browser-context: 16;
@@ -90,7 +99,7 @@ $spacing-unit: 1.250em; // 20px
   overflow: hidden;
   border-radius: 50%;
   display: inline-block;
-  
+
   &__asset {
     display: block;
     width: 100%;
@@ -109,13 +118,13 @@ $spacing-unit: 1.250em; // 20px
 .c-users {
   position: relative;
   overflow: hidden;
-  
+
   &__user {
     &:nth-child(odd) {
       float: left;
       text-right: left;
     }
-  
+
     &:nth-child(even) {
       float: right;
     }
@@ -124,11 +133,11 @@ $spacing-unit: 1.250em; // 20px
 
 .c-chat-window {
   @extend %border-box;
-  
+
   *, *:after, *:before {
     @extend %border-box;
   }
-  
+
   background-color: #156e8b;
   //border: 1px solid #999;
   margin-right: auto;
@@ -139,46 +148,46 @@ $spacing-unit: 1.250em; // 20px
   max-width: rem(40rem);
   padding: ($spacing-unit * 2 ) $spacing-unit;
   position: relative;
-  
-  
+
+
   p {
     margin-top: 0;
     margin-bottom: 0;
   }
-  
+
   &__message {
     color: #FFF;
     clear: both;
     padding: $spacing-unit / 2;
     border-radius: $spacing-unit / 4;
     max-width: 50%;
-    
+
     &--person-1 {
       background-color: #a9d6aa;
       float: left;
       margin-right: $spacing-unit;
     }
-    
+
     &--person-2 {
       background-color: #a9d6aa;
       color: #333;
       float: right;
       margin-left: $spacing-unit;
-      
+
     }
-    
+
     & + .c-chat-window__message {
       margin-top: $spacing-unit;
     }
   }
-  
+
 
   &:after {
     content: "";
     clear: both;
     display: table;
   }
-  
+
   &__user-images {
     padding: $spacing-unit;
     position: absolute;
@@ -187,7 +196,7 @@ $spacing-unit: 1.250em; // 20px
     width: 100%;
     z-index: 1;
   }
-  
+
   &__scroll {
     padding: rem(180) $spacing-unit ($spacing-unit * 2) $spacing-unit;
     position: absolute;
@@ -200,6 +209,3 @@ $spacing-unit: 1.250em; // 20px
     z-index: 0;
   }
 }
-
-
-
