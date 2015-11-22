@@ -1,14 +1,16 @@
 <template name="tinder">
   <p>Find someone to talk to:</p>
-  {{>tinderCard}}
+  {{randomUser}}
+  {{>tinderCard randomUser}}
 </template>
 
 <template name="tinderCard">
   <div class="row center">
     <div class="row center">
       <p class="description">"I'm feeling a little better."</p>
+      <p class="description">name is {{username}}</p>
     </div>
-    <img src="http://lorempixel.com/400/200/people" text="image of person">
+    <img src="http://thecatapi.com/api/images/get?format=src&type=gif" text="image of person">
   </div>
   <div class="row">
     <a class="col-md-4 fa fa-arrow-left"></a>
