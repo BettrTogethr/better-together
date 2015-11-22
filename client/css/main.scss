@@ -1,0 +1,205 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav {
+  background-color: #329492;
+}
+
+header {
+  font-size: 70pt;
+}
+
+.fa {
+  color: black;
+}
+
+.center {
+  text-align: center;
+}
+
+.ultralight {
+  font-family: "Avenir Next", "UltraLight";
+  font-weight: lighter;
+  padding-right: 3px;
+}
+
+
+.demibold {
+  font-family: "Avenir Next", "DemiBold";
+  font-weight: bolder;
+}
+
+footer {
+  background-color: #329492;
+}
+
+.footer-copyright {
+  background-color: #329492;
+}
+
+body {
+  background-color: #156e8b;
+  font-family: "Avenir Next";
+  color: white;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.yield {
+  margin-top: 20px;
+}
+
+.swipe {
+  color: #78C09C;
+}
+
+.fa-check-circle {
+  padding-right: 25px;
+}
+
+
+
+$browser-context: 16;
+
+@function rem($pixels, $context: $browser-context, $em: false) {
+  @return #{$pixels/$context}#{if($em != true,"rem","em")};
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return rem($pixels, $context, true);
+}
+
+$spacing-unit: 1.250em; // 20px
+
+
+:root {
+  font-family: sans-serif;
+}
+
+.c-avatar {
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
+  
+  &__asset {
+    display: block;
+    width: 100%;
+  }
+}
+
+%border-box {
+  box-sizing: border-box;
+}
+
+.c-user {
+  text-align: center;
+  max-width: rem(100);
+}
+
+.c-users {
+  position: relative;
+  overflow: hidden;
+  
+  &__user {
+    &:nth-child(odd) {
+      float: left;
+      text-right: left;
+    }
+  
+    &:nth-child(even) {
+      float: right;
+    }
+  }
+}
+
+.c-chat-window {
+  @extend %border-box;
+  
+  *, *:after, *:before {
+    @extend %border-box;
+  }
+  
+  background-color: #156e8b;
+  //border: 1px solid #999;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100vh;
+  // height: calc(100vh - 120px);
+  overflow: hidden;
+  max-width: rem(40rem);
+  padding: ($spacing-unit * 2 ) $spacing-unit;
+  position: relative;
+  
+  
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  &__message {
+    color: #FFF;
+    clear: both;
+    padding: $spacing-unit / 2;
+    border-radius: $spacing-unit / 4;
+    max-width: 50%;
+    
+    &--person-1 {
+      background-color: navy;
+      float: left;
+      margin-right: $spacing-unit;
+    }
+    
+    &--person-2 {
+      background-color: #ccc;
+      color: #333;
+      float: right;
+      margin-left: $spacing-unit;
+      
+    }
+    
+    & + .c-chat-window__message {
+      margin-top: $spacing-unit;
+    }
+  }
+  
+
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  &__user-images {
+    padding: $spacing-unit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  &__scroll {
+    padding: rem(180) $spacing-unit ($spacing-unit * 2) $spacing-unit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 0;
+  }
+}
+
+
+
