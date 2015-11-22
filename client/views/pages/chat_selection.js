@@ -67,3 +67,14 @@ Template.chat_selection.onCreated(function(){
     self.subscribe('users');
   });
 });
+
+Template.userCard.onCreated(function(){
+  var self = this;
+  console.log(Template.currentData());
+  self.autorun(function(){
+    Session.set('chatting_with', Meteor.users.find({username: Template.currentData().username}).fetch()[0]);
+    console.log('autorun ran');
+  });
+  console.log('session set');
+});
+
