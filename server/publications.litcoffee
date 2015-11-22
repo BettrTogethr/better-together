@@ -8,3 +8,10 @@
           timeCreated: -1
 
       Chats.find criteria, options
+
+    Meteor.publish 'users', ->
+      criteria = {}
+      options =
+        fields:
+          username: 1
+      Meteor.users.find criteria, options
