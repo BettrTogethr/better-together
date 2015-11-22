@@ -13,9 +13,12 @@ Template.chat_selection.helpers({
   }
 });
 
-var updateUser = function(context){
+var updateUser = function(context, delta){
   users = Meteor.users.find({}).fetch();
-  index = (Session.get('userIndex') + 1) % users.length;
+  index = (Session.get('userIndex') + delta) % users.length;
+  if (index < 0) {
+    index = users.length - 1;
+  }
   var gifUrl = 'http://thecatapi.com/api/images/get?format=src&type=gif&size=med&time='+(new Date().getTime()).toString();
   Session.set('gifUrl',gifUrl);
   Session.set('userIndex', index);
@@ -23,13 +26,13 @@ var updateUser = function(context){
 
 Template.userCard.helpers({
   templateGestures: {
-    'panleft img': function (event, templateInstance) {
+    'swipeleft img': function (event, templateInstance) {
       console.log('swipe left!');
-      updateUser(this);
+      updateUser(this, -1);
     },
-    'panright img': function (event, templateInstance) {
+    'swiperight img': function (event, templateInstance) {
       console.log('swipe right!');
-      updateUser(this);
+      updateUser(this, 1);
     }
   },
   gifUrl: function(){
