@@ -66,3 +66,11 @@ body {
 .fa-check-circle {
   padding-right: 25px;
 }
+
+#createMessage {
+  color: white;
+}
+
+.chat-username {
+  margin-top: -15px;
+}

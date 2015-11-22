@@ -1,9 +1,12 @@
 <template name='chat'>
-  <div class='row'>
+  <div class='row center'>
     <div class="col s2">
       {{>profile_pic currentUser}}
     </div>
-    <div class="col s2 offset-s8">
+    <div class="col s8">
+      <h2>Let's Chat!</h2>
+    </div>
+    <div class="col s2">
       {{>profile_pic chatting_with}}
     </div>
   </div>
@@ -22,9 +25,9 @@
 </template>
 
 <template name="profile_pic">
-  <div class="center">
+  <div>
     <img src="/photo_profile.png">
     <br />
-    <h5 class="ultralight">{{username}}</h5>
+    <h5 class="ultralight chat-username">{{username}}</h5>
   </div>
 </template>
