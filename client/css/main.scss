@@ -16,6 +16,9 @@ header {
 
 .fa {
   color: black;
+  &.fa-arrow-circle-left, &.fa-arrow-circle-right {
+    color: #78C09C;
+  }
 }
 
 .center {
@@ -34,11 +37,7 @@ header {
   font-weight: bolder;
 }
 
-footer {
-  background-color: #329492;
-}
-
-.footer-copyright {
+footer, .footer-copyright {
   background-color: #329492;
 }
 
@@ -50,9 +49,9 @@ body {
 
 .icon-block {
   padding: 0 15px;
-}
-.icon-block .material-icons {
-	font-size: inherit;
+  &.material-icons {
+    font-size: inherit;
+  }
 }
 
 .yield {
@@ -68,15 +67,15 @@ body {
 }
 
 .profile-form {
-  input {
-    color: #fff;
-  }
-  label {
+  input, label {
     color: #fff;
   }
 }
 
-
+a img {
+  vertical-align: middle;
+  padding: 0px 20px 50px 20px;
+}
 
 $browser-context: 16;
 
