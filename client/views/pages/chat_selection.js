@@ -1,7 +1,8 @@
 Template.chat_selection.helpers({
   randomUser: function(){
     console.log("randomUser");
-    user = Meteor.users.findOne();
+    index = _.random(0,Meteor.users.find().count() - 1)
+    user = Meteor.users.find().fetch()[index];
     Session.set('chatting_with', user);
     return user;
   }
