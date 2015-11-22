@@ -14,7 +14,7 @@ Template.chat_selection.rendered = function(){
     location.reload();
   });
 
-  $('.fa-check-circle').click(function(){
+  $('.chat').click(function(){
     console.log("clicked check link");
     console.log(Session.get('chatting_with'));
     FlowRouter.go('chat')
