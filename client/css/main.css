@@ -11,8 +11,18 @@ nav {
 }
 
 header {
-  font-family: "Avenir Next", "UltraLight"
-  font-size: 70pt;
+  ffont-size: 70pt;
+}
+
+.ultralight {
+  font-family: "Avenir Next", "UltraLight";
+  font-weight: lighter;
+  padding-right: 3px;
+}
+
+.demibold {
+  font-family: "Avenir Next", "DemiBold";
+  font-weight: bolder;
 }
 
 footer {
