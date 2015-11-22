@@ -1,18 +1,20 @@
-Template.tinder.helpers({
+Template.chat_selection.helpers({
   randomUser: function(){
     console.log("randomUser");
     return Meteor.users.findOne();
-  },
-  'button .swipe': function(){
-    console.log("clicked swipe link");
   }
 });
 
-Template.tinder.rendered = function(){
-  $('.swipe').click(function(){
+Template.chat_selection.rendered = function(){
+  $('.fa-arrow-circle-right').click(function(){
     console.log("clicked swipe link");
-    //FlowRouter.go('tinder')
+    //FlowRouter.go('chat_selection')
     location.reload();
+  });
+
+  $('.fa-check-circle').click(function(){
+    console.log("clicked check link");
+    FlowRouter.go('chat')
   });
 };
 
