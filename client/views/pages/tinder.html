@@ -1,24 +1,25 @@
 <template name="tinder">
   <p>Find someone to talk to:</p>
-  {{>tinderCard}}
+  {{>tinderCard randomUser}}
 </template>
 
 <template name="tinderCard">
   <div class="row center">
     <div class="row center">
+      <p class="description">My name is {{username}}</p>
       <p class="description">"I'm feeling a little better."</p>
     </div>
-    <img src="http://lorempixel.com/400/200/people" text="image of person">
+    <img src="http://thecatapi.com/api/images/get?format=src&type=gif" text="image of person">
   </div>
   <div class="row">
     <div class="col s2">
-      <a class="fa fa-arrow-left"></a>
+      <a class="swipe fa fa-arrow-left"></a>
     </div>
     <div class="col s8">
       <p>swipe left or right</p>
     </div>
     <div clas="col s2">
-      <a class="fa fa-arrow-right"></a>
+      <a class="swipe fa fa-arrow-right"></a>
     </div>
   </div>
 </template>
