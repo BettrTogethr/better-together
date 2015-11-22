@@ -1,0 +1,14 @@
+<template name='chatrooms'>
+  <div class='row'>
+    <div class='col s12'>
+      {{#each chatrooms}}
+        {{> chatroom}}
+      {{/each}}
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col s12'>
+      {{> quickForm id='createChatroom' type='method' meteormethod='createChatroom' schema='ChatroomsSchema' fields='chatName, members' buttonContent='Send' }}
+    </div>
+  </div>
+</template>
